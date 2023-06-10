@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <title>Window Size</title>
+  <script>
+    function getWindowSize() {
+      var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+      document.getElementById('width').textContent = 'Width: ' + windowWidth + ' and '+ 'Height: ' + windowHeight ;
+    }
+
+    window.addEventListener('resize', getWindowSize);
+    getWindowSize();
+  </script>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <p id="width" style="font-size:26px;padding:20px;font-weight:bold"></p>
 </body>
-
 </html>
